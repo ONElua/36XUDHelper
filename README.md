@@ -9,7 +9,7 @@ This simple app will help you install/download the nedeed apps and files to get 
 ## IMPORTANT ##
 **This app was created for people without access to any PC, or for those who want to do the whole process right on the PS Vita.**
 
-### Easy Downgrader/Updater for PS Vita Current Version: 1.01 ###
+### Easy Downgrader/Updater for PS Vita Current Version: 1.02 ###
 
 
 ### Instructions ###
