@@ -17,6 +17,9 @@ This simple app will help you install/download the nedeed apps and files to get 
 
 2. After taking care of step 1, now you can think of what FW suits you best.
 
+### Changelog 1.02 ###
+- Added Enso for 3.60 and 3.65.<br>
+
 ### Changelog 1.01 ###
 
 - App name changed to Easy Downgrader/Updater for PS Vita.<br>
@@ -75,7 +78,7 @@ For warning screens!!: Please read them, thats why we put them in there!! :).
 To Update from 3.60 or Downgrade from 3.67, 3.68, 3.69, 3.70 to 3.65 with Enso do as follows:<br>
 1. Make sure your battery is 70% or over (50% recommended by Modoru).<br>
 2. Press Circle and select 3.65 UPDATE (this will also install Modoru if not found).<br>
-3. Press Square to install Enso v1.1 App.<br>
+3. Press Square to install 3.65 Enso v1.1 App.<br>
 4. Press Cross to install H-encore (only if you are in 3.60 so you can have H-encore installed once you Update).<br>
 5. After the PS Vita restart, reactivate HEN if you have to, Disable all plugins and restart again (you can use autoplugin to do so or reset taihen config.txt).<br>
 6. Once the PS Vita has restarted, reactivate HEN if you have to, launch Modoru and follow the instructions.<br>
@@ -89,7 +92,7 @@ If everything went as planned... Congrats!! now you have a 3.65Enso PS Vita.
 
 1. Make sure your battery is 70% or over (50% recommended by Modoru).<br>
 2. Press Circle and select 3.60 UPDATE (this will also install Modoru if not found).<br>
-3. Press Square to install Enso v1.1 App.<br>
+3. Press Square to install 3.60 Enso v1.1 App.<br>
 4. Press Cross to install Memecore (only if you want to go back to 3.60 so you can have Memecore installed once you Downgrade).<br>
 5. After the PS Vita restart, reactivate HEN if you have to, Disable all plugins and restart again (you can use autoplugin to do so or reset taihen config.txt).<br>
 6. Once the PS Vita has restarted, reactivate HEN if you have to, launch Modoru and follow the instructions.<br>
