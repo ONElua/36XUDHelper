@@ -4,12 +4,12 @@
 ![header](Preview.png)
 
 ### Description ###
-This simple app will help you install/download the nedeed apps and files to get your PS Vita updated/Downgraded to your FW selection between 3 to choose from.
+This simple app will help you install/download the nedeed apps and files to get your PS Vita updated/Downgraded to your FW selection between 3 to choose from (3.60,3.65 or 3.68).
 
 ## IMPORTANT ##
 **This app was created for people without access to any PC, or for those who want to do the whole process right on the PS Vita.**
 
-### Easy Downgrader/Updater for PS Vita Current Version: ??? ###
+### Easy Downgrader/Updater for PS Vita Current Version: 1.01 ###
 
 
 ### Instructions ###
