@@ -72,7 +72,7 @@ For warning screens!!: Please read them, thats why we put them in there!! :).
 
 *To Install 3.65 Enso on your console*
 
-To Update from 3.60 or Downgrade from 3.67, .68, .69, .70 to 3.65 with Enso do as follows:<br>
+To Update from 3.60 or Downgrade from 3.67, 3.68, 3.69, 3.70 to 3.65 with Enso do as follows:<br>
 1. Make sure your battery is 70% or over (50% recommended by Modoru).<br>
 2. Press Circle and select 3.65 UPDATE (this will also install Modoru if not found).<br>
 3. Press Square to install Enso v1.1 App.<br>
@@ -81,7 +81,7 @@ To Update from 3.60 or Downgrade from 3.67, .68, .69, .70 to 3.65 with Enso do a
 6. Once the PS Vita has restarted, reactivate HEN if you have to, launch Modoru and follow the instructions.<br>
 7. After the Downgrade/Update process is done, reactivate HEN, launch Enso v1.1 and follow the instructions.<br>
 
-If everything went as planned... Congrats!! now you have a Ensoed 3.65 PS Vita.
+If everything went as planned... Congrats!! now you have a 3.65Enso PS Vita.
 
 ![header](PreviewsImgs.png)
 
