@@ -1,6 +1,6 @@
 --[[
-    365 U/D H designed By:
-	- BaltazaR4 (https://twitter.com/BaltazaR4).
+    Easy Downgrader/Updater for PS Vita designed By:
+	- BaltazaR4 (https://twitter.com/baltazarregala4).
 	with help from:
 	- Gdljjrod (https://twitter.com/gdljjrod).
 ]]
