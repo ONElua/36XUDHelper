@@ -95,11 +95,15 @@ while true do
 		end
 
 		if buttons.square then
+			menu_enso()
+			
+			--[[
 			if game.exists("MLCL00003") and game.rif("MLCL00003") then
 				os.message(STRINGS_ENSO_FOUND,0) 
 			else
 				enso()      
 			end
+			]]
 		end
 
 		if buttons.triangle then

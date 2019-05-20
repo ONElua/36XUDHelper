@@ -124,22 +124,6 @@ function modoru()
 	buttons.homepopup(1)
 end
 
-function enso()
-    if back1 then back1:blit(0,0) end
-		
-	buttons.homepopup(0)
-
-		files.copy("resources/enso/MLCL00003", "ux0:app")
-		local result = game.refresh("ux0:app/MLCL00003")
-		if result == 1 then
-			os.message(STRINGS_ENSO)
-		else
-			os.message(STRINGS_ERROR)
-		end
-
-	buttons.homepopup(1)
-end
-
 pups = {
 	{ name = "3.60 UPDATE", name2 = "360_PSP2UPDAT.PUP", link = "http://www.mediafire.com/file/pu0ld9au549s9mb/360_PSP2UPDAT.PUP/file",	crc = 0xA0A98D12,  },
 	{ name = "3.65 UPDATE", name2 = "365_PSP2UPDAT.PUP", link = "http://www.mediafire.com/file/qz4h7ptp2tztx5f/365_PSP2UPDAT.PUP/file",	crc = 0xE13A9791,  },
@@ -269,6 +253,74 @@ function menu_pups()
 		
 		if buttons.accept then
 			if dl_file(pups[selector]) then break end
+		end
+
+	end
+
+end
+
+Ensos = { 
+	{	name = "3.60 Enso v1.1", path = "resources/360enso/MLCL00003" },
+	{	name = "3.65 Enso v1.1", path = "resources/enso/MLCL00003" },
+}
+
+function install_enso(obj)
+    if back1 then back1:blit(0,0) end
+
+	buttons.homepopup(0)
+
+		if game.exists("MLCL00003") then game.delete("MLCL00003") end
+
+		files.copy(obj.path, "ux0:app")
+		local result = game.refresh("ux0:app/MLCL00003")
+		if result == 1 then
+			os.message(obj.name.."\n\n"..STRINGS_ENSO)
+			buttons.homepopup(1)
+			return true
+		else
+			os.message(STRINGS_ERROR)
+		end
+
+	buttons.homepopup(1)
+	return false
+end
+
+function menu_enso()
+
+	local selector = 1
+	buttons.interval(12,6)
+	while true do
+		buttons.read()
+
+		if back1 then back1:blit(0,0) end
+		screen.print(480,10,STRINGS_ENSO_SEL,1.0,color.white,color.gray,__ACENTER)
+
+		local y = 180
+		for i=1, #Ensos do
+			if i == selector then
+				draw.fillrect(0,y-5,960,29,color.green:a(100))
+			end
+			screen.print(480,y,Ensos[i].name,1.0,color.white,color.gray,__ACENTER)
+			y+=30
+		end
+
+		screen.flip()
+
+		--Controls
+		if buttons.up then
+			selector -= 1
+		end
+		if buttons.down then
+			selector += 1
+		end
+
+		if selector < 1 then selector = #Ensos end
+		if selector > #Ensos then selector = 1 end
+		
+		if buttons.cancel then break end
+		
+		if buttons.accept then
+			if install_enso(Ensos[selector]) then break end
 		end
 
 	end
