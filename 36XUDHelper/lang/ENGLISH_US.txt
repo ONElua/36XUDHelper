@@ -1,0 +1,69 @@
+
+--Texts (only text in " ")
+
+--script.lua
+STRINGS_WARNING =		    "Press any key to continue"
+
+--menu
+STRINGS_TITLE1 =			"Version 3.65 detected"
+STRINGS_TITLE2 =			"Update/Downgrade without PC"
+STRINGS_VERSION =           "Actual version: "
+STRINGS_WLAN =              "Wlan strength: "
+STRINGS_INSTALL_HE =		"Install H-encore"
+STRINGS_INSTALL_EN =		"Install Enso 1.1"
+STRINGS_INSTALL_MO =		"Install Modoru"
+STRINGS_DOWNLOAD_P =		"Select FW PUP"
+STRINGS_EXTRA_OPTS =		"Extra options (SELECT)"
+STRINGS_H_FOUND =           "H-encore installed"
+STRINGS_H_NOTF =            "Ready"
+
+--Installation messages
+STRINGS_REST_MEINS =        "\n\nMemecore will work only for 3.63 and lower versions \n\noption to install it on 3.65 and over \n\n has been disabled"
+STRINGS_MODO_FOUND =        "\nModoru already installed"
+STRINGS_MODO_NOT_FOUND =	"\nFirst install Modoru !!!"
+STRINGS_MODO_PROBLEM =      "\nThere was a problem with the Modoru installation :("
+STRINGS_REST_MEREI =        "\n\nOption disabled for 3.65 and over"
+STRINGS_ENSO_FOUND =        "\nEnso already installed"
+STRINGS_MERE_SAVE =         "\n\nReinstalling Memecore savedata"
+STRINGS_ME_NOBUB =          "\n\nInstall Memecore bubble first"
+STRINGS_HERE_SAVE =         "\n\nReinstalling Hencore savedata"
+STRINGS_HE_NOBUB =          "\n\nInstall Hencore bubble first"
+
+--Functions.lua
+STRINGS_REBOOT =			"\n\nYour PS Vita must restart now to update DB"
+STRINGS_ERROR =	        	"Installation failed"
+STRINGS_WAIT =				"Please wait..."
+STRINGS_BUB_SHRINK =        "Shrinking H encore bubble"
+STRINGS_S_DONE =            "Succes!"
+STRINGS_SHRINK =            "\n\nEncore already installed \n\nWould you like to reinstall it ? \n\n(less than 10mb version)"
+STRINGS_CUSTOM_SAVEDATA =	"Customizing Encore"
+STRINGS_MEHE_FOUND =        "\n\nEncore already installed"
+STRINGS_MODORU =            "Modoru installed correctly"
+STRINGS_ENSO_SEL =			"Choose the Enso version to install"
+STRINGS_ENSO =              "Installed Correctly !!!"
+STRINGS_PUPS_SEL =			"Choose the FW to use in Modoru"
+STRINGS_WAIT_DL =	    	"Starting download...Please wait"
+STRINGS_PUP_MOVED =         "Moved to MODORU"
+STRINGS_DL_CANCLD =         "Error or Download cancelled"
+STRINGS_DL_ERROR =          "The file can't be downloaded"
+STRINGS_PUP_DETECT =        "PSP2UPDAT.PUP Detected, checking PUP version"
+STRINGS_PUP_FOUND =         "PUP found: "
+STRINGS_PUP_RIGHT =         " Correctly in Modoru"
+STRINGS_PUP_CRC =           "downloaded, checking CRC"
+STRINGS_PUP_CORPTD =        "PUP Corrupted"
+STRINGS_PARSE_ERR =         "Error parsing link"
+STRINGS_DL_HTML =           "Could not download html"
+
+--Callbacks.lua
+STRINGS_INSTALL =           "Installing..."
+STRINGS_FILE =              "File: "
+STRINGS_DLOAD =             "Downloading PUP Update..."
+STRINGS_CANCEL =            "Press circle if you want to cancel "
+
+--Extra options
+STRINGS_EXTRA_T =		    "Extra options"
+STRINGS_EXTRA_C =           "SELECT : Close"
+STRINGS_EXTRA_MEME =	    "X                           Install Memecore"
+STRINGS_EXTRA_HERE =		"R+up                      Reinstall Hencore savedata"
+STRINGS_EXTRA_MERE =		"L+up                      Reinstall Memecore savedata"
+

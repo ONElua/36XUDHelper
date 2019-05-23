@@ -1,69 +1,153 @@
+--[[
+    Easy Downgrader/Updater for PS Vita designed By:
+	- BaltazaR4 (https://twitter.com/baltazarregala4).
+	with help from:
+	- Gdljjrod (https://twitter.com/gdljjrod).
+]]
 
---Texts (only text in " ")
+color.loadpalette()
 
---script.lua
-STRINGS_WARNING =		    "Appuyez sur une touche pour continuer"
+dofile("lang/english_us.txt")
+if files.exists("lang/"..os.language()..".txt") then dofile("lang/"..os.language()..".txt") end
 
---menu
-STRINGS_TITLE1 =			"Version 3.65 détectée"
-STRINGS_TITLE2 =			"Mettre à jour/Downgrader sans PC"
-STRINGS_VERSION =           "Version actuelle: "
-STRINGS_WLAN =              "Signal WiFi : "
-STRINGS_INSTALL_HE =		"Installer h-encore"
-STRINGS_INSTALL_EN =		"Installer Enso 1.1"
-STRINGS_INSTALL_MO =		"Installer Modoru"
-STRINGS_DOWNLOAD_P =		"Choix de la MAJ"
-STRINGS_EXTRA_OPTS =		"SELECT : Menu Extra"
-STRINGS_H_FOUND =           "H-encore installé"
-STRINGS_H_NOTF =            "Pas d'exploit installer"
+warnen1 = image.load("resources/warningEN1.png")
+warnen2 = image.load("resources/warningEN2.png")
+warnes1 = image.load("resources/warningES1.png")
+warnes2 = image.load("resources/warningES2.png")
 
---Installation messages
-STRINGS_REST_MEINS =        "\n\nMemecore ne fonctionne que sur les versions 3.63 et inférieures,\n\nl’option pour l’installer à partir du firmware 3.65\n\na été désactivée"
-STRINGS_MODO_FOUND =        "\n\nModoru est déjà installé"
-STRINGS_MODO_NOT_FOUND =	"\nInstaller en premier Modoru !!!"
-STRINGS_MODO_PROBLEM =      "\nIl y a un problème avec l'installation de Modoru :("
-STRINGS_REST_MEREI =        "\n\nOption désactivée pour les versions 3.65 et plus"
-STRINGS_ENSO_FOUND =        "\n\nEnso est déjà installé"
-STRINGS_MERE_SAVE =         "\n\nReinstaller la sauvegarde de Memecore"
-STRINGS_ME_NOBUB =          "\n\nInstaller la bulle Memecore en premier"
-STRINGS_HERE_SAVE =         "\n\nReinstaller la sauvegarde de h-encore"
-STRINGS_HE_NOBUB =          "\n\nInstaller la bulle h-encore en premier"
+function warning(img)
+	img:blit(0,0)
+	screen.print(10,520,STRINGS_WARNING,1,color.green)
+	screen.flip()
+	buttons.waitforkey()
+end
 
---Functions.lua
-STRINGS_REBOOT =			"\n\nVotre PS Vita doit redémarré pour mettre à jour \n\nla base de donnée"
-STRINGS_ERROR =	        	"Installation échouée"
-STRINGS_WAIT =				"Veuillez patienter svp..."
-STRINGS_BUB_SHRINK =        "Réduire de la taille de la bulle h-encore"
-STRINGS_S_DONE =            "Réussi!"
-STRINGS_SHRINK =            "\n\nh-Encore est déjà installé \n\nVoudriez-vous le réinstaller ? \n\n(version inférieure à 10 Mo)"
-STRINGS_CUSTOM_SAVEDATA =	"Customisation de la bulle h-encore"
-STRINGS_MEHE_FOUND =        "\n\nh-encore est déjà installé"
-STRINGS_MODORU =            "\n\nModoru a été correctement installé"
-STRINGS_ENSO_SEL =			"-= Choisissez la version d’Enso à installer =-"
-STRINGS_ENSO =              "a été installé avec succès !!!"
-STRINGS_PUPS_SEL =			"-= Choisissez la version du firmware à utilisé avec Modoru =-"
-STRINGS_WAIT_DL =	    	"Démarrage du téléchargement...Veuillez patienter svp"
-STRINGS_PUP_MOVED =         "Firmware téléchargé et placé dans MODORU"
-STRINGS_DL_CANCLD =         "Erreur ou téléchargement annulé"
-STRINGS_DL_ERROR =          "Le fichier ne peut pas être téléchargé"
-STRINGS_PUP_DETECT =        "Fichier PSP2UPDAT.PUP détecté, vérification de la version du firmware"
-STRINGS_PUP_FOUND =         "PUP trouvé: "
-STRINGS_PUP_RIGHT =         " Correctement dans Modoru"
-STRINGS_PUP_CRC =           "fichier téléchargé, vérification du CRC"
-STRINGS_PUP_CORPTD =        "PUP corrompue"
-STRINGS_PARSE_ERR =         "Erreur d'analyse du lien"
-STRINGS_DL_HTML =           "Impossible de télécharger le fichier de maj"
+if os.language() == "SPANISH" then
+	warning(warnes1)
+	warning(warnes2)
+else
+	warning(warnen1)
+	warning(warnen2)
+end
 
---Callbacks.lua
-STRINGS_INSTALL =           "Installation en cours..."
-STRINGS_FILE =              "Fichier : "
-STRINGS_DLOAD =             "Téléchargement de la mise à jour..."
-STRINGS_CANCEL =            "Appuyez sur le cercle si vous souhaitez annuler "
+back = image.load("resources/back.png")	
+back1 = image.load("resources/back1.png")	
+version = os.swversion()
 
---Extra options
-STRINGS_EXTRA_T =		    "Menu Extra"
-STRINGS_EXTRA_C =           "SELECT : Fermer"
-STRINGS_EXTRA_MEME =	    "X                            Installer Memecore"
-STRINGS_EXTRA_HERE =		"R+up                      Réinstaller la sauvegarde de h-encore"
-STRINGS_EXTRA_MERE =		"L+up                      Réinstaller la sauvegarde de Memecore"
+--Update
+dofile("git/shared.lua")
+dofile("git/updater.lua")
 
+dofile("system/functions.lua")
+dofile("system/callbacks.lua")
+
+-----------------Menu---------------------
+
+while true do
+    buttons.read()
+    if back then back:blit(0,0) end
+	--if files.exists("ux0:id.dat") then files.delete("ux0:id.dat") end
+
+    ---------------------------Impresion en pantalla-----------------------------------
+
+    if version == "3.65" then
+	    screen.print(10,10,STRINGS_TITLE1,1,color.white)
+	else
+        screen.print(10,10,STRINGS_TITLE2,1,color.white)
+		screen.print(740,490,STRINGS_VERSION..tostring(os.swversion()))
+    end
+
+	screen.print(10,490,STRINGS_WLAN..tostring(wlan.strength()).."%")
+
+    screen.print(400,410,STRINGS_INSTALL_HE,1,color.white,color.black)
+
+    screen.print(160,260,STRINGS_INSTALL_EN,1,color.white,color.black)
+
+    screen.print(410,120,STRINGS_INSTALL_MO,1,color.white,color.black)
+
+	screen.print(620,260,STRINGS_DOWNLOAD_P,1,color.green,color.black)
+
+	screen.print(360,520,STRINGS_EXTRA_OPTS,1,color.green)
+
+	if files.exists("ux0:app/PCSG90096") then
+	    screen.print(950,10,STRINGS_H_FOUND,1,color.green,0x0,__ARIGHT)
+	else
+        screen.print(950,10,STRINGS_H_NOTF,1,color.green,0x0,__ARIGHT)	
+	end
+
+	menu_ctx.run()
+
+	screen.flip()
+
+	----------------------------------Controles de homebrew-------------------------------
+
+	--Submenu no Abierto
+	if not menu_ctx.open then
+
+		if buttons.circle then
+			menu_pups()
+			pup_download = ""
+		end
+
+		if buttons.cross then
+			if not game.exists("PCSG90096") then 
+				hm_core(HENCORE)
+			else
+			    hen_shrink()
+			end
+		end
+
+		if buttons.square then
+			menu_enso()
+		end
+
+		if buttons.triangle then
+			if game.exists("MODORU000") and game.rif("MODORU000") then
+				os.message(STRINGS_MODO_FOUND,0) 
+			else
+				modoru()
+			end
+		end
+
+	--Submenu Abierto
+	else
+
+		if buttons.cross then
+			if version >= "3.65" then 
+		        os.message(STRINGS_REST_MEINS,0)
+			elseif version <= "3.63" then 
+				if not game.exists("PCSG90096") then 
+					hm_core(MEMECORE)
+                else
+                    hen_shrink()				
+                end				
+		    end
+		end
+
+		if buttons.held.l and buttons.up then
+			if game.exists("PCSG90096") then
+			    if version >= "3.65" then
+				    os.message(STRINGS_REST_MEREI,0)
+			    elseif version <= "3.63" then
+				    os.message(STRINGS_MERE_SAVE,0)
+				    savedata_core(MEMECORE)
+				    power.restart()
+				end	
+			else
+				os.message(STRINGS_ME_NOBUB,0)
+			end
+		end
+
+		if buttons.held.r and buttons.up then
+			if game.exists("PCSG90096") then
+				os.message(STRINGS_HERE_SAVE,0)
+				savedata_core(HENCORE)
+				power.restart()
+			else
+				os.message(STRINGS_HE_NOBUB,0)
+			end
+		end
+
+	end
+
+end

@@ -317,10 +317,10 @@ function menu_enso()
 		if selector < 1 then selector = #Ensos end
 		if selector > #Ensos then selector = 1 end
 		
-		if buttons.cancel then break end
+		if buttons.cancel then return true end
 		
 		if buttons.accept then
-			if install_enso(Ensos[selector]) then break end
+			if install_enso(Ensos[selector]) then return true end
 		end
 
 	end
