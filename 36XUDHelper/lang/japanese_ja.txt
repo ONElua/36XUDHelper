@@ -1,0 +1,66 @@
+--Texts (only text in " ")
+
+--script.lua
+STRINGS_WARNING =		    "ボタンを押して続行"
+
+--menu
+STRINGS_TITLE1 =			"3.65が検出されました"
+STRINGS_TITLE2 =			"PC無しでアップデート/ダウングレード"
+STRINGS_VERSION =           "実際のバージョン: "
+STRINGS_WLAN =              "無線(WLAN) 強度: "
+STRINGS_INSTALL_HE =		"h-encoreをインストール"
+STRINGS_INSTALL_EN =		"Enso 1.1をインストール"
+STRINGS_INSTALL_MO =		"modoruをインストール "
+STRINGS_DOWNLOAD_P =		"FW PUPの選択"
+STRINGS_EXTRA_OPTS =		"追加オプション (SELECT)"
+STRINGS_H_FOUND =           "h-encore:インストール完了"
+STRINGS_H_NOTF =            "準備完了"
+
+--Installation messages
+STRINGS_REST_MEINS =        "\n\nMemecoreは3.63以下でのみ動作します。\n\3.65以降には\n\nインストールできません"
+STRINGS_MODO_FOUND =        "\nmodoruはインストールされています"
+STRINGS_MODO_NOT_FOUND =	"\nmodoruをインストールしてください"
+STRINGS_MODO_PROBLEM =      "\nmodoruのインストールに問題がありました"
+STRINGS_REST_MEREI =        "\n\n3.65以降のオプションは無効です"
+STRINGS_ENSO_FOUND =        "\nEnsoはインストールされています"
+STRINGS_MERE_SAVE =         "\n\nMemecoreのセーブデータを再インストールします"
+STRINGS_ME_NOBUB =          "\n\nMemecoreをインストールしてください"
+STRINGS_HERE_SAVE =         "\n\nh-encoreのセーブデータを再インストールします"
+STRINGS_HE_NOBUB =          "\n\nh-encoreをインストールしてください"
+
+--Functions.lua
+STRINGS_REBOOT =			"\n\n本機を再起動してデータベースを更新します"
+STRINGS_ERROR =	        	"インストール失敗"
+STRINGS_WAIT =				"お待ちください..."
+STRINGS_BUB_SHRINK =        "h-encoreを圧縮"
+STRINGS_S_DONE =            "成功"
+STRINGS_SHRINK =            "\n\nh-encoreはインストールされています。\n\n再インストールしますか？\n\n(10MB以下)"
+STRINGS_CUSTOM_SAVEDATA =	"h-encoreのカスタマイズ"
+STRINGS_MEHE_FOUND =        "\n\nh-encoreはインストールされています"
+STRINGS_MODORU =            "Modoruは正しくインストールされました"
+STRINGS_ENSO_SEL =			"インストールするEnsoのバージョンを選択"
+STRINGS_ENSO =              "正常にインストール完了"
+STRINGS_PUPS_SEL =			"modoruで使うFWを選択"
+STRINGS_WAIT_DL =	    	"ダウンロード開始...お待ちください"
+STRINGS_PUP_MOVED =         "modoruに移動"
+STRINGS_DL_CANCLD =         "エラーまたはダウンロードのキャンセル"
+STRINGS_DL_ERROR =          "ファイルをダウンロードできませんでした"
+STRINGS_PUP_DETECT =        "PSP2UPDAT.PUP Detected, checking PUP version"
+STRINGS_PUP_FOUND =         "PUP found: "
+STRINGS_PUP_RIGHT =         "modoruで正常に"
+STRINGS_PUP_CRC =           "ダウングレードできました CRCをチェックしています"
+STRINGS_PUP_CORPTD =        "PUPが破損しています"
+STRINGS_PARSE_ERR =         "エラー:リンクの解析に失敗"
+STRINGS_DL_HTML =           "htmlをダウンロードできませんでした"
+--Callbacks.lua
+STRINGS_INSTALL =           "インストール中..."
+STRINGS_FILE =              "File: "
+STRINGS_DLOAD =             "PUP Updateをダウンロード中..."
+STRINGS_CANCEL =            "〇ボタンでキャンセル "
+
+--Extra options
+STRINGS_EXTRA_T =		    "追加オプション"
+STRINGS_EXTRA_C =           "SELECT : 閉じる"
+STRINGS_EXTRA_MEME =	    "X                            Memecoreをインストール"
+STRINGS_EXTRA_HERE =		"R+↑                      h-encoreのセーブデータを再インストール"
+STRINGS_EXTRA_MERE =		"L+↑                      Memecoreのセーブデータを再インストール"
