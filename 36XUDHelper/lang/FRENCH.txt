@@ -2,18 +2,18 @@
 --Texts (only text in " ")
 
 --script.lua
-STRINGS_FIRST_WARNING_1 =			"If you are using sd2vita, psvsd or USB drive"
-STRINGS_FIRST_WARNING_2 =			"make sure you have the original memory card"
-STRINGS_FIRST_WARNING_3 =			"mounted as ux0 (for PSVITA FAT Model)"
-STRINGS_FIRST_WARNING_4 =			"or the internal memory mounted as ux0"
-STRINGS_FIRST_WARNING_5 =			"(for PSVITA SLIM Model)"
+STRINGS_FIRST_WARNING_1 =			"Si vous utilisé une SD2Vita, PSVSD ou un support USB,"
+STRINGS_FIRST_WARNING_2 =			"assurez-vous d'avoir la carte mémoire originale"
+STRINGS_FIRST_WARNING_3 =			"monté en ux0 (pour les PSVita FAT)"
+STRINGS_FIRST_WARNING_4 =			"ou la mémoire interne montée en tant que ux0"
+STRINGS_FIRST_WARNING_5 =			"(pour les PSVITA SLIM )"
 
-STRINGS_WARNING_TITLE =		    	"----- WARNING !!! -----"
-STRINGS_WARNING =		    		"Appuyez sur une touche pour continuer"
+STRINGS_WARNING_TITLE = 			"-==== !!! ATTENTION !!! ====-"
+STRINGS_WARNING = 					"Appuyez sur une touche pour continuer"
 
-STRINGS_SECOND_WARNING_1 =			"Never attempt to use MODORU from the sd2vita,"
-STRINGS_SECOND_WARNING_2 =			"psvsd or USB drive, if you do,"
-STRINGS_SECOND_WARNING_3 =			"is at your own risk!"
+STRINGS_SECOND_WARNING_1 =			"Ne jamais utilisé MODORU avec un SD2Vita," 
+STRINGS_SECOND_WARNING_2 =			"PSVSD ou un support USB, Si vous le faites," 
+STRINGS_SECOND_WARNING_3 =			"cest à vos risque et péril!"
 
 --menu
 STRINGS_TITLE1 =			"Version 3.65 détectée"
