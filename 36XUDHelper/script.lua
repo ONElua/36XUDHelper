@@ -12,6 +12,11 @@ if os.language() == "SPANISH" and files.exists("lang/spanish.txt") then
     dofile("lang/spanish.txt")
 end
 
+dofile("lang/english_us.txt")
+if os.language() == "FRENCH" and files.exists("lang/french.txt") then
+    dofile("lang/french.txt")
+end
+
 warnen1 = image.load("resources/warningEN1.png")
 warnen2 = image.load("resources/warningEN2.png")
 warnes1 = image.load("resources/warningES1.png")
