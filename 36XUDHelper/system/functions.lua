@@ -18,6 +18,12 @@ else
 	if os.requireu("ux0:VitaShell/module/user.suprx")==1 then __user = true end
 end
 
+SYMBOL_CIRCLE	= string.char(0xe2)..string.char(0x97)..string.char(0x8b)
+SYMBOL_CROSS	= string.char(0xe2)..string.char(0x95)..string.char(0xb3)
+
+BCANCEL = SYMBOL_CIRCLE
+if buttons.assign()==0 then BCANCEL = SYMBOL_CROSS end
+
 function message_wait(message)
 	local mge = (message or STRINGS_WAIT)
 	local titlew = string.format(mge)
@@ -252,6 +258,9 @@ function menu_pups()
 		if buttons.cancel then break end
 		
 		if buttons.accept then
+			if back1 then back1:blit(0,0) end
+				message_wait()
+			os.delay(500)
 			if dl_file(pups[selector]) then break end
 		end
 
@@ -320,6 +329,9 @@ function menu_enso()
 		if buttons.cancel then return true end
 		
 		if buttons.accept then
+			if back1 then back1:blit(0,0) end
+				message_wait()
+			os.delay(500)
 			if install_enso(Ensos[selector]) then return true end
 		end
 

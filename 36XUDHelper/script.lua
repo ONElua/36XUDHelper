@@ -6,30 +6,6 @@
 ]]
 
 color.loadpalette()
-
-dofile("lang/english_us.txt")
-if files.exists("lang/"..os.language()..".txt") then dofile("lang/"..os.language()..".txt") end
-
-warnen1 = image.load("resources/warningEN1.png")
-warnen2 = image.load("resources/warningEN2.png")
-warnes1 = image.load("resources/warningES1.png")
-warnes2 = image.load("resources/warningES2.png")
-
-function warning(img)
-	img:blit(0,0)
-	screen.print(10,520,STRINGS_WARNING,1,color.green)
-	screen.flip()
-	buttons.waitforkey()
-end
-
-if os.language() == "SPANISH" then
-	warning(warnes1)
-	warning(warnes2)
-else
-	warning(warnen1)
-	warning(warnen2)
-end
-
 back = image.load("resources/back.png")	
 back1 = image.load("resources/back1.png")	
 version = os.swversion()
@@ -37,6 +13,36 @@ version = os.swversion()
 --Update
 dofile("git/shared.lua")
 dofile("git/updater.lua")
+
+dofile("lang/english_us.txt")
+if files.exists("lang/"..os.language()..".txt") then dofile("lang/"..os.language()..".txt") end
+
+function warning(img)
+	img:blit(0,0)
+		screen.print(480,15,STRINGS_WARNING_TITLE,1.2,color.white,0x0,__ACENTER)
+		screen.print(480,185,STRINGS_FIRST_WARNING_1,1.2,color.white,0x0,__ACENTER)
+		screen.print(480,215,STRINGS_FIRST_WARNING_2,1.2,color.white,0x0,__ACENTER)
+		screen.print(480,245,STRINGS_FIRST_WARNING_3,1.2,color.white,0x0,__ACENTER)
+		screen.print(480,275,STRINGS_FIRST_WARNING_4,1.2,color.white,0x0,__ACENTER)
+		screen.print(480,305,STRINGS_FIRST_WARNING_5,1.2,color.white,0x0,__ACENTER)
+		screen.print(10,520,STRINGS_WARNING,1,color.green)
+	screen.flip()
+	buttons.waitforkey()
+end
+
+function warning2(img)
+	img:blit(0,0)
+		screen.print(480,15,STRINGS_WARNING_TITLE,1.2,color.white,0x0,__ACENTER)
+		screen.print(480,185,STRINGS_SECOND_WARNING_1,1.2,color.white,0x0,__ACENTER)
+		screen.print(480,215,STRINGS_SECOND_WARNING_2,1.2,color.white,0x0,__ACENTER)
+		screen.print(480,245,STRINGS_SECOND_WARNING_3,1.2,color.white,0x0,__ACENTER)
+		screen.print(10,520,STRINGS_WARNING,1,color.green)
+	screen.flip()
+	buttons.waitforkey()
+end
+
+warning(back1)
+warning2(back1)
 
 dofile("system/functions.lua")
 dofile("system/callbacks.lua")
@@ -46,7 +52,6 @@ dofile("system/callbacks.lua")
 while true do
     buttons.read()
     if back then back:blit(0,0) end
-	--if files.exists("ux0:id.dat") then files.delete("ux0:id.dat") end
 
     ---------------------------Impresion en pantalla-----------------------------------
 
@@ -75,6 +80,7 @@ while true do
         screen.print(950,10,STRINGS_H_NOTF,1,color.green,0x0,__ARIGHT)	
 	end
 
+	--if buttons.select then error("FTP") end
 	menu_ctx.run()
 
 	screen.flip()

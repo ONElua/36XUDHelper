@@ -2,7 +2,18 @@
 --Texts (only text in " ")
 
 --script.lua
-STRINGS_WARNING =		    "Appuyez sur une touche pour continuer"
+STRINGS_FIRST_WARNING_1 =			"If you are using sd2vita, psvsd or USB drive"
+STRINGS_FIRST_WARNING_2 =			"make sure you have the original memory card"
+STRINGS_FIRST_WARNING_3 =			"mounted as ux0 (for PSVITA FAT Model)"
+STRINGS_FIRST_WARNING_4 =			"or the internal memory mounted as ux0"
+STRINGS_FIRST_WARNING_5 =			"(for PSVITA SLIM Model)"
+
+STRINGS_WARNING_TITLE =		    	"----- WARNING !!! -----"
+STRINGS_WARNING =		    		"Appuyez sur une touche pour continuer"
+
+STRINGS_SECOND_WARNING_1 =			"Never attempt to use MODORU from the sd2vita,"
+STRINGS_SECOND_WARNING_2 =			"psvsd or USB drive, if you do,"
+STRINGS_SECOND_WARNING_3 =			"is at your own risk!"
 
 --menu
 STRINGS_TITLE1 =			"Version 3.65 détectée"
@@ -58,11 +69,11 @@ STRINGS_DL_HTML =           "Impossible de télécharger le fichier de maj"
 STRINGS_INSTALL =           "Installation en cours..."
 STRINGS_FILE =              "Fichier : "
 STRINGS_DLOAD =             "Téléchargement de la mise à jour..."
-STRINGS_CANCEL =            "Appuyez sur le cercle si vous souhaitez annuler "
+STRINGS_CANCEL =            "Si vous souhaitez annuler Appuyez sur le"
 
 --Extra options
 STRINGS_EXTRA_T =		    "Menu Extra"
 STRINGS_EXTRA_C =           "SELECT : Fermer"
 STRINGS_EXTRA_MEME =	    "X                            Installer Memecore"
-STRINGS_EXTRA_HERE =		"R+up                      Réinstaller la sauvegarde de h-encore"
-STRINGS_EXTRA_MERE =		"L+up                      Réinstaller la sauvegarde de Memecore"
+STRINGS_EXTRA_HERE =		"R + ↑                      Réinstaller la sauvegarde de h-encore"
+STRINGS_EXTRA_MERE =		"L + ↑                      Réinstaller la sauvegarde de Memecore"

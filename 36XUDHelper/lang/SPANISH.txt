@@ -2,7 +2,18 @@
 --Texts (only text in " ")
 
 --script.lua
-STRINGS_WARNING =		    "Continua con cualquier tecla"
+STRINGS_FIRST_WARNING_1 =			"Si usas sd2vita,psvsd o memoria USB"
+STRINGS_FIRST_WARNING_2 =			"asegurate de montar la memoria original como ux0"
+STRINGS_FIRST_WARNING_3 =			"(para modelos PSVITA FAT)"
+STRINGS_FIRST_WARNING_4 =			"o montar la memoria interna como ux0"
+STRINGS_FIRST_WARNING_5 =			"(para modelos PSVITA SLIM)"
+
+STRINGS_WARNING_TITLE =		    	"----- ¡¡¡ CUIDADO !!! -----"
+STRINGS_WARNING =		    		"Continua con cualquier tecla"
+
+STRINGS_SECOND_WARNING_1 =			"Nunca intentes usar MODORU desde la sd2vita"
+STRINGS_SECOND_WARNING_2 =			"psvsd o memoria USB, si lo haces,"
+STRINGS_SECOND_WARNING_3 =			"es bajo tu propio riesgo"
 
 --menu
 STRINGS_TITLE1 =			"Version 3.65 detectada"
@@ -58,12 +69,11 @@ STRINGS_DL_HTML =           "No se pudo descargar html"
 STRINGS_INSTALL =           "Instalando..."
 STRINGS_FILE =              "Archivo: "
 STRINGS_DLOAD =             "Descargando PUP 3.65..."
-STRINGS_CANCEL =            "Presiona circulo si deseas cancelar "
+STRINGS_CANCEL =            "Si deseas cancelar presiona "
 
 --Extra options
 STRINGS_EXTRA_T =		    "Opciones Extra"
 STRINGS_EXTRA_C =           "SELECT : Cerrar"
 STRINGS_EXTRA_MEME =	    "X                           Instalar Memecore"
-STRINGS_EXTRA_HERE =		"R+up                      Reinstalar Hencore savedata"
-STRINGS_EXTRA_MERE =		"L+up                      Reinstalar Memecore savedata"
-
+STRINGS_EXTRA_HERE =		"R + ↑                      Reinstalar Hencore savedata"
+STRINGS_EXTRA_MERE =		"L + ↑                      Reinstalar Memecore savedata"

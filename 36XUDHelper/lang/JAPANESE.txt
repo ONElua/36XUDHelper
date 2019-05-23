@@ -1,7 +1,19 @@
+
 --Texts (only text in " ")
 
 --script.lua
-STRINGS_WARNING =		    "ボタンを押して続行"
+STRINGS_FIRST_WARNING_1 =			"If you are using sd2vita, psvsd or USB drive"
+STRINGS_FIRST_WARNING_2 =			"make sure you have the original memory card"
+STRINGS_FIRST_WARNING_3 =			"mounted as ux0 (for PSVITA FAT Model)"
+STRINGS_FIRST_WARNING_4 =			"or the internal memory mounted as ux0"
+STRINGS_FIRST_WARNING_5 =			"(for PSVITA SLIM Model)"
+
+STRINGS_WARNING_TITLE =		    	"----- WARNING !!! -----"
+STRINGS_WARNING =		   			"ボタンを押して続行"
+
+STRINGS_SECOND_WARNING_1 =			"Never attempt to use MODORU from the sd2vita,"
+STRINGS_SECOND_WARNING_2 =			"psvsd or USB drive, if you do,"
+STRINGS_SECOND_WARNING_3 =			"is at your own risk!"
 
 --menu
 STRINGS_TITLE1 =			"3.65が検出されました"
@@ -52,15 +64,16 @@ STRINGS_PUP_CRC =           "ダウングレードできました CRCをチェ�
 STRINGS_PUP_CORPTD =        "PUPが破損しています"
 STRINGS_PARSE_ERR =         "エラー:リンクの解析に失敗"
 STRINGS_DL_HTML =           "htmlをダウンロードできませんでした"
+
 --Callbacks.lua
 STRINGS_INSTALL =           "インストール中..."
 STRINGS_FILE =              "File: "
 STRINGS_DLOAD =             "PUP Updateをダウンロード中..."
-STRINGS_CANCEL =            "〇ボタンでキャンセル "
+STRINGS_CANCEL =            "ボタンでキャンセル "
 
 --Extra options
 STRINGS_EXTRA_T =		    "追加オプション"
 STRINGS_EXTRA_C =           "SELECT : 閉じる"
 STRINGS_EXTRA_MEME =	    "X                            Memecoreをインストール"
-STRINGS_EXTRA_HERE =		"R+↑                      h-encoreのセーブデータを再インストール"
-STRINGS_EXTRA_MERE =		"L+↑                      Memecoreのセーブデータを再インストール"
+STRINGS_EXTRA_HERE =		"R + ↑                      h-encoreのセーブデータを再インストール"
+STRINGS_EXTRA_MERE =		"L + ↑                      Memecoreのセーブデータを再インストール"

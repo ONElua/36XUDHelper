@@ -30,7 +30,7 @@ function onNetGetFile(size,written,speed)
 
 	screen.print(10,10,pup_download)--STRINGS_DLOAD)
 	screen.print(480,470,tostring(files.sizeformat(written or 0)).." / "..tostring(files.sizeformat(size or 0)),1,color.white, color.blue:a(135),__ACENTER)
-	screen.print(480,50,STRINGS_CANCEL,1,color.white, color.blue:a(135),__ACENTER)
+	screen.print(480,50,STRINGS_CANCEL.." "..BCANCEL,1,color.white, color.blue:a(135),__ACENTER)
 	
 	l = (written*940)/size
 		screen.print(3+l,495,math.floor((written*100)/size).."%",0.8,0xFFFFFFFF,0x0,__ACENTER)
