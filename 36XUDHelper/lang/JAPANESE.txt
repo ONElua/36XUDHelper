@@ -2,18 +2,18 @@
 --Texts (only text in " ")
 
 --script.lua
-STRINGS_FIRST_WARNING_1 =			"If you are using sd2vita, psvsd or USB drive"
-STRINGS_FIRST_WARNING_2 =			"make sure you have the original memory card"
-STRINGS_FIRST_WARNING_3 =			"mounted as ux0 (for PSVITA FAT Model)"
-STRINGS_FIRST_WARNING_4 =			"or the internal memory mounted as ux0"
-STRINGS_FIRST_WARNING_5 =			"(for PSVITA SLIM Model)"
+STRINGS_FIRST_WARNING_1 =			"sd2vita,psvsd,USBドライブを使用している場合は"
+STRINGS_FIRST_WARNING_2 =			"純正のメモリーカードを使用するか、"
+STRINGS_FIRST_WARNING_3 =			"ux0としてマウントする(PSVITA PSVITA FAT Model)か"
+STRINGS_FIRST_WARNING_4 =			"内部ストレージを使用してください。"
+STRINGS_FIRST_WARNING_5 =			"(PSVITA SLIM Model)"
 
-STRINGS_WARNING_TITLE =		    	"----- WARNING !!! -----"
+STRINGS_WARNING_TITLE =		    	"----- 警告 -----"
 STRINGS_WARNING =		   			"ボタンを押して続行"
 
-STRINGS_SECOND_WARNING_1 =			"Never attempt to use MODORU from the sd2vita,"
-STRINGS_SECOND_WARNING_2 =			"psvsd or USB drive, if you do,"
-STRINGS_SECOND_WARNING_3 =			"is at your own risk!"
+STRINGS_SECOND_WARNING_1 =			"sd2vita,psvsd,USBドライブから"
+STRINGS_SECOND_WARNING_2 =			"modoruを使用する行為は"
+STRINGS_SECOND_WARNING_3 =			"大変危険(自己責任)です。"
 
 --menu
 STRINGS_TITLE1 =			"3.65が検出されました"
