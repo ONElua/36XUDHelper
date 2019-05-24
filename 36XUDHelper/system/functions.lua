@@ -146,38 +146,45 @@ function dl_file(obj)
 
 	if not game.exists("MODORU000") then os.message(STRINGS_MODO_PROBLEM) return false end
 
-	if back1 then back1:blit(0,0) end
-		message_wait(STRINGS_WAIT_DL)
-	os.delay(500)
-
+	CRC = ""
 	pup_download = ""
-
+	
 	if files.exists("ux0:app/MODORU000/PSP2UPDAT.PUP") then
 
 		if back1 then back1:blit(0,0) end
 			message_wait(STRINGS_PUP_DETECT)
 		os.delay(500)
 
-		local CRC = files.crc32("ux0:app/MODORU000/PSP2UPDAT.PUP")
+		CRC = files.crc32("ux0:app/MODORU000/PSP2UPDAT.PUP")
 
-		local flag = false
-		for i=1,#pups do
-			if CRC == pups[i].crc then
-				
-				if back1 then back1:blit(0,0) end
-					message_wait(STRINGS_PUP_FOUND..pups[i].name)
-				os.delay(1500)
-		
-				flag = true
-				if pups[i].crc == obj.crc then
-					os.message(pups[i].name2..STRINGS_PUP_RIGHT)
-					return true
-				end
+		if CRC == obj.crc then
+			os.message(obj.name2.."\n\n"..STRINGS_PUP_RIGHT)
+			return true
+		else
+
+			if files.exists("ux0:data/PUPS/"..obj.name2) then
+				files.delete("ux0:app/MODORU000/PSP2UPDAT.PUP")
+				files.copy("ux0:data/PUPS/"..obj.name2, "ux0:app/MODORU000/")
+				files.rename("ux0:app/MODORU000/"..obj.name2, "PSP2UPDAT.PUP")
+				os.message(obj.name2.."\n\n"..STRINGS_PUP_RIGHT)
+				return true
 			end
 		end
-		files.delete("ux0:app/MODORU000/PSP2UPDAT.PUP")
+
+	else
+
+		if files.exists("ux0:data/PUPS/"..obj.name2) then
+			files.copy("ux0:data/PUPS/"..obj.name2, "ux0:app/MODORU000/")
+			files.rename("ux0:app/MODORU000/"..obj.name2, "PSP2UPDAT.PUP")
+			os.message(obj.name2.."\n\n"..STRINGS_PUP_RIGHT)
+			return true
+		end
 
 	end
+
+	if back1 then back1:blit(0,0) end
+		message_wait(STRINGS_WAIT_DL)
+	os.delay(500)
 
 	buttons.homepopup(0)
 	if http.download(obj.link,"mf.html").success then
@@ -187,24 +194,25 @@ function dl_file(obj)
 			if var.raw then
 
 				pup_download = obj.name
-				if http.download(var.href, "ux0:app/MODORU000/"..obj.name2).success then
+				if http.download(var.href, "ux0:data/PUPS/"..obj.name2).success then
 	
 					if back1 then back1:blit(0,0) end
 						message_wait(obj.name2..STRINGS_PUP_CRC)
 					os.delay(500)
 
-					if files.crc32("ux0:app/MODORU000/"..obj.name2) == obj.crc then
+					if files.crc32("ux0:data/PUPS/"..obj.name2) == obj.crc then
 						files.delete("ux0:app/MODORU000/PSP2UPDAT.PUP")
+						files.copy("ux0:data/PUPS/"..obj.name2, "ux0:app/MODORU000/")
 						files.rename("ux0:app/MODORU000/"..obj.name2, "PSP2UPDAT.PUP")
 						os.message(obj.name.."\n\n"..STRINGS_PUP_MOVED)
 						buttons.homepopup(1)
 						return true
 					else
 						os.message(STRINGS_PUP_CORPTD)
-						files.delete("ux0:app/MODORU000/"..obj.name2)
+						files.delete("ux0:data/PUPS/"..obj.name2)
 					end
 				else
-					files.delete("ux0:app/MODORU000/"..obj.name2)
+					files.delete("ux0:data/PUPS/"..obj.name2)
 					os.message(STRINGS_DL_ERROR)
 				end
 
@@ -254,14 +262,14 @@ function menu_pups()
 
 		if selector < 1 then selector = #pups end
 		if selector > #pups then selector = 1 end
-		
-		if buttons.cancel then break end
-		
+
+		if buttons.cancel then return end
+
 		if buttons.accept then
 			if back1 then back1:blit(0,0) end
 				message_wait()
 			os.delay(500)
-			if dl_file(pups[selector]) then break end
+			if dl_file(pups[selector]) then return end
 		end
 
 	end
@@ -269,16 +277,42 @@ function menu_pups()
 end
 
 Ensos = { 
-	{	name = "3.60 Enso v1.1", path = "resources/360enso/MLCL00003" },
-	{	name = "3.65 Enso v1.1", path = "resources/enso/MLCL00003" },
+	{	name = "3.60 Enso v1.1", path = "resources/360enso/MLCL00003",	crc = 0x2BC26A81 },
+	{	name = "3.65 Enso v1.1", path = "resources/enso/MLCL00003",		crc = 0xD6FE3C33 },
 }
 
 function install_enso(obj)
     if back1 then back1:blit(0,0) end
 
+	CRC = ""
 	buttons.homepopup(0)
 
-		if game.exists("MLCL00003") then game.delete("MLCL00003") end
+		if game.exists("MLCL00003") then
+
+			if back1 then back1:blit(0,0) end
+				message_wait(STRINGS_ENSO_DETECT)
+			os.delay(500)
+
+			CRC = files.crc32("ux0:app/MLCL00003/EBOOT.BIN")
+
+			local flag = false
+			for i=1,#Ensos do
+				
+				if CRC == Ensos[i].crc then
+					flag = true
+					if Ensos[i].crc == obj.crc then
+						os.message(Ensos[i].name.."\n\n"..STRINGS_ENSO_FOUND)
+						buttons.homepopup(1)
+						return true
+					end
+				end
+			end
+			game.delete("MLCL00003")
+		end
+
+		if back1 then back1:blit(0,0) end
+			message_wait()
+		os.delay(500)
 
 		files.copy(obj.path, "ux0:app")
 		local result = game.refresh("ux0:app/MLCL00003")
@@ -326,7 +360,7 @@ function menu_enso()
 		if selector < 1 then selector = #Ensos end
 		if selector > #Ensos then selector = 1 end
 		
-		if buttons.cancel then return true end
+		if buttons.released.cancel then return true end
 		
 		if buttons.accept then
 			if back1 then back1:blit(0,0) end

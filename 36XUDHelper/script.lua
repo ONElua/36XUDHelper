@@ -90,17 +90,17 @@ while true do
 	--Submenu no Abierto
 	if not menu_ctx.open then
 
-		if buttons.circle then
-			menu_pups()
-			pup_download = ""
-		end
-
 		if buttons.cross then
 			if not game.exists("PCSG90096") then 
 				hm_core(HENCORE)
 			else
 			    hen_shrink()
 			end
+		end
+
+		if buttons.circle then
+			menu_pups()
+			pup_download = ""
 		end
 
 		if buttons.square then
