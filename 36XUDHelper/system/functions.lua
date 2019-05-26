@@ -163,6 +163,11 @@ function dl_file(obj)
 		else
 
 			if files.exists("ux0:data/PUPS/"..obj.name2) then
+			
+				if back1 then back1:blit(0,0) end
+					message_wait(STRINGS_PUP_FOUND_DATA)
+				os.delay(750)
+
 				files.delete("ux0:app/MODORU000/PSP2UPDAT.PUP")
 				files.copy("ux0:data/PUPS/"..obj.name2, "ux0:app/MODORU000/")
 				files.rename("ux0:app/MODORU000/"..obj.name2, "PSP2UPDAT.PUP")
@@ -174,12 +179,23 @@ function dl_file(obj)
 	else
 
 		if files.exists("ux0:data/PUPS/"..obj.name2) then
+
+			if back1 then back1:blit(0,0) end
+				message_wait(STRINGS_PUP_FOUND_DATA)
+			os.delay(750)
+
 			files.copy("ux0:data/PUPS/"..obj.name2, "ux0:app/MODORU000/")
 			files.rename("ux0:app/MODORU000/"..obj.name2, "PSP2UPDAT.PUP")
 			os.message(obj.name2.."\n\n"..STRINGS_PUP_RIGHT)
 			return true
 		end
 
+	end
+
+	local dest,flag = "ux0:app/MODORU000/",false
+	if os.message(STRINGS_PUP_TO_DATA,1) == 1 then
+		dest = "ux0:data/PUPS/"
+		flag = true
 	end
 
 	if back1 then back1:blit(0,0) end
@@ -194,25 +210,29 @@ function dl_file(obj)
 			if var.raw then
 
 				pup_download = obj.name
-				if http.download(var.href, "ux0:data/PUPS/"..obj.name2).success then
+				if http.download(var.href, dest..obj.name2).success then
 	
 					if back1 then back1:blit(0,0) end
 						message_wait(obj.name2..STRINGS_PUP_CRC)
 					os.delay(500)
 
-					if files.crc32("ux0:data/PUPS/"..obj.name2) == obj.crc then
+					if files.crc32(dest..obj.name2) == obj.crc then
+
 						files.delete("ux0:app/MODORU000/PSP2UPDAT.PUP")
-						files.copy("ux0:data/PUPS/"..obj.name2, "ux0:app/MODORU000/")
+						if flag then
+							files.copy(dest..obj.name2, "ux0:app/MODORU000/")
+						end
 						files.rename("ux0:app/MODORU000/"..obj.name2, "PSP2UPDAT.PUP")
+
 						os.message(obj.name.."\n\n"..STRINGS_PUP_MOVED)
 						buttons.homepopup(1)
 						return true
 					else
 						os.message(STRINGS_PUP_CORPTD)
-						files.delete("ux0:data/PUPS/"..obj.name2)
+						files.delete(dest..obj.name2)
 					end
 				else
-					files.delete("ux0:data/PUPS/"..obj.name2)
+					files.delete(dest..obj.name2)
 					os.message(STRINGS_DL_ERROR)
 				end
 
