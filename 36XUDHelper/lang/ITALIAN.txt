@@ -1,0 +1,82 @@
+
+--Texts (only text in " ")
+
+--script.lua
+STRINGS_FIRST_WARNING_1 =			"Se si utilizza sd2vita, psvsd o unità USB"
+STRINGS_FIRST_WARNING_2 =			"assicurati di avere la scheda di memoria originale"
+STRINGS_FIRST_WARNING_3 =			"montata come ux0 (per modelli PSVITA FAT)"
+STRINGS_FIRST_WARNING_4 =			"o la memoria interna montata come ux0"
+STRINGS_FIRST_WARNING_5 =			"(per modelli PSVITA SLIM )"
+
+STRINGS_WARNING_TITLE =		    	"----- ATTENZIONE !!! -----"
+STRINGS_WARNING =		    		"Premere un tasto qualsiasi per continuare"
+
+STRINGS_SECOND_WARNING_1 =			"Non tentare mai di utilizzare MODORU da sd2vita,"
+STRINGS_SECOND_WARNING_2 =			"psvsd o unità USB,"
+STRINGS_SECOND_WARNING_3 =			"è a tuo rischio e pericolo!"
+
+--menu
+STRINGS_TITLE1 =			"Rilevata Versione 3.65"
+STRINGS_TITLE2 =			"Aggiorna/Downgrade senza PC"
+STRINGS_VERSION =           "Versione Attuale: "
+STRINGS_WLAN =              "Potenza del segnale Wlan: "
+STRINGS_INSTALL_HE =		"Installa H-encore"
+STRINGS_INSTALL_EN =		"Installa Enso 1.1"
+STRINGS_INSTALL_MO =		"Installa Modoru"
+STRINGS_DOWNLOAD_P =		"Seleziona FW PUP"
+STRINGS_EXTRA_OPTS =		"Opzioni Extra(SELECT)"
+STRINGS_H_FOUND =           "H-encore installato"
+STRINGS_H_NOTF =            "Pronto"
+
+--Installation messages
+STRINGS_REST_MEINS =        "\n\nMemecore funziona solo sulle versioni 3.63 o inferiore \n\nLe opzioni per installarlo su 3.65 e oltre \n\n sono disabilitate"
+STRINGS_MODO_FOUND =        "\nModoru risulta già installato"
+STRINGS_MODO_NOT_FOUND =	"\nInstalla prima Modoru !!!"
+STRINGS_MODO_PROBLEM =      "\nSi è verificato un problema con l'installazione di Modoru :("
+STRINGS_REST_MEREI =        "\n\nOpzione disabilitata per 3.65 e superiore"
+STRINGS_ENSO_FOUND =        "\nEnso risulta già installato"
+STRINGS_MERE_SAVE =         "\n\nReinstallazione Memecore savedata"
+STRINGS_ME_NOBUB =          "\n\nInstalla prima la bolla di Memecore"
+STRINGS_HERE_SAVE =         "\n\nReinstallazione di Hencore savedata"
+STRINGS_HE_NOBUB =          "\n\nInstalla prima la bolla di Hencore"
+
+--Functions.lua
+STRINGS_REBOOT =			"\n\nLa tua PS Vita deve essere riavviata per aggiornare il DB"
+STRINGS_ERROR =	        	"Installazione fallita"
+STRINGS_WAIT =				"Attendere prego..."
+STRINGS_BUB_SHRINK =        "Shrinking H encore bubble"
+STRINGS_S_DONE =            "Successo!"
+STRINGS_SHRINK =            "\n\nEncore risulta già installato \n\nVorresti reinstallarlo di nuovo ? \n\n(versione inferiore a 10mb)"
+STRINGS_CUSTOM_SAVEDATA =	"Personalizzazione di Encore"
+STRINGS_MEHE_FOUND =        "\n\nEncore risulta già installato"
+STRINGS_MODORU =            "Modoru installato correttamente"
+STRINGS_ENSO_SEL =			"Scegli la versione di Enso da installare"
+STRINGS_ENSO_DETECT =       "Rilevato Enso, controllo della versione"
+STRINGS_ENSO =              "Installato Correttamente !!!"
+STRINGS_PUPS_SEL =			"Scegli il FW da usare su Modoru"
+STRINGS_WAIT_DL =	    	"Inizio del download in corso\n\nAttendere prego..."
+STRINGS_PUP_MOVED =         "Passato a MODORU"
+STRINGS_DL_CANCLD =         "Errore o Download cancellato"
+STRINGS_DL_ERROR =          "Il file non puo' essere scaricato"
+STRINGS_PUP_DETECT =        "Rilevato PSP2UPDAT.PUP\n\ncontrollo della versione del PUP"
+STRINGS_PUP_FOUND =         "PUP trovato: "
+STRINGS_PUP_FOUND_DATA =    "PUP trovato su data/PUPS/ \n\nSpostamento su MODORU"
+STRINGS_PUP_TO_DATA =    	"Vuoi scaricare il PUP su ux0:data/PUPS/ ??\n\nSe si sceglie di no, il PUP verrà scaricato su MODORU"
+STRINGS_PUP_RIGHT =         " Correttamente su Modoru"
+STRINGS_PUP_CRC =           "scaricato,\n\ncontrollo CRC"
+STRINGS_PUP_CORPTD =        "PUP Corrotto"
+STRINGS_PARSE_ERR =         "Errore parsing link"
+STRINGS_DL_HTML =           "Impossibile scaricare html"
+
+--Callbacks.lua
+STRINGS_INSTALL =           "Installazione in corso..."
+STRINGS_FILE =              "File: "
+STRINGS_DLOAD =             "Scaricamento aggiornamento PUP in corso..."
+STRINGS_CANCEL =            "Se desideri annullarlo Premere "
+
+--Extra options
+STRINGS_EXTRA_T =		    "Opzioni Extra"
+STRINGS_EXTRA_C =           "SELECT : Chiudi"
+STRINGS_EXTRA_MEME =	    "X                           Installa Memecore"
+STRINGS_EXTRA_HERE =		"R + ↑                      Reinstalla Hencore savedata"
+STRINGS_EXTRA_MERE =		"L + ↑                      Reinstalla Memecore savedata"
