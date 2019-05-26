@@ -9,13 +9,20 @@ This simple app will help you install/download the nedeed apps and files to get 
 ## IMPORTANT ##
 **This app was created for people without access to any PC, or for those who want to do the whole process right on the PS Vita.**
 
-### Easy Downgrader/Updater for PS Vita Current Version: 1.02 ###
+### Easy Downgrader/Updater for PS Vita Current Version: 1.03 ###
 
 
 ### Instructions ###
 1. **To be able to install and use this app you must have either Trinity, H-encore or Henkaku installed**
 
 2. After taking care of step 1, now you can think of what FW suits you best.
+
+### Changelog 1.03 ###
+Added the option to download and save the PUP files to ux0:data/PUPS/ (127mb ea), choose yes/no for each version.<br>
+Added Enso version autodetect to avoid reinstalling chosen Enso version if the app was found.<br>
+Added the possibility to translate warning messages in (lang).txt.<br>
+Added Japanese and French language.<br>
+Fixed bug when exiting Enso Menu, now it goes to Main Menu instead of PUP Menu.<br>
 
 ### Changelog 1.02 ###
 - Added Enso for 3.60 and 3.65.<br>
