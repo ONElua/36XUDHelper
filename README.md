@@ -21,7 +21,9 @@ This simple app will help you install/download the nedeed apps and files to get 
 Added the option to download and save the PUP files to ux0:data/PUPS/ (127mb ea), choose yes/no for each version.<br>
 Added Enso version autodetect to avoid reinstalling chosen Enso version if the app was found.<br>
 Added the possibility to translate warning messages in (lang).txt.<br>
-Added Japanese and French language.<br>
+Added Japanese language for HackUsagi.<br>
+Added French language for Chronoss.<br>
+Added Italian language for TheheroGAC.<br>
 Fixed bug when exiting Enso Menu, now it goes to Main Menu instead of PUP Menu.<br>
 
 ### Changelog 1.02 ###
