@@ -1,0 +1,82 @@
+
+--Texts (only text in " ")
+
+--script.lua
+STRINGS_FIRST_WARNING_1 =			"Falls du eine sd2vita, psvsd oder einen USB-Speicher verwendest,"
+STRINGS_FIRST_WARNING_2 =			"stelle sicher, dass die original Speicherkarte"
+STRINGS_FIRST_WARNING_3 =			"als ux0 eingebunden ist (PS Vita Modell 1000/Fat)"
+STRINGS_FIRST_WARNING_4 =			"oder der interne Speicher als ux0 eingebunden ist"
+STRINGS_FIRST_WARNING_5 =			"(PS Vita Modell 2000/Slim)"
+
+STRINGS_WARNING_TITLE =		    	"----- WARNUNG !!! -----"
+STRINGS_WARNING =		    		"Zum Fortfahren eine beliebige Taste drücken"
+
+STRINGS_SECOND_WARNING_1 =			"Versuche niemals, Modoru von einer sd2vita,"
+STRINGS_SECOND_WARNING_2 =			"psvsd oder einem USB-Speicher zu benutzen, die Verwendung"
+STRINGS_SECOND_WARNING_3 =			"geschieht auf eigene Gefahr!"
+
+--menu
+STRINGS_TITLE1 =			"Version 3.65 gefunden"
+STRINGS_TITLE2 =			"Update/Downgrade ohne PC"
+STRINGS_VERSION =           "Aktuelle Version: "
+STRINGS_WLAN =              "WLAN-Signal: "
+STRINGS_INSTALL_HE =		"h-encore installieren"
+STRINGS_INSTALL_EN =		"Enso 1.1 installieren"
+STRINGS_INSTALL_MO =		"Modoru installieren"
+STRINGS_DOWNLOAD_P =		"Firmware-PUP auswählen"
+STRINGS_EXTRA_OPTS =		"Zusatzoptionen (SELECT)"
+STRINGS_H_FOUND =           "h-encore installiert"
+STRINGS_H_NOTF =            "Bereit"
+
+--Installation messages
+STRINGS_REST_MEINS =        "\n\nMemecore ist nur mit 3.63 oder niedriger kompatibel\n\nDie Option zur Installation auf 3.65 und höher \n\n wurde deaktiviert"
+STRINGS_MODO_FOUND =        "\nModoru ist bereits installiert"
+STRINGS_MODO_NOT_FOUND =	"\nZuerst Modoru installieren!"
+STRINGS_MODO_PROBLEM =      "\nEs gab ein Problem mit der Modoru-Installation :("
+STRINGS_REST_MEREI =        "\n\nOption deaktiviert für 3.65 und höher"
+STRINGS_ENSO_FOUND =        "\nEnso ist bereits installiert"
+STRINGS_MERE_SAVE =         "\n\nSpeicherdaten für Memecore werden erneut installiert"
+STRINGS_ME_NOBUB =          "\n\nZuerst die Memecore-Bubble installieren"
+STRINGS_HERE_SAVE =         "\n\nSpeicherdaten für h-encore werden erneut installiert"
+STRINGS_HE_NOBUB =          "\n\nZuerst die h-encore-Bubble installieren"
+
+--Functions.lua
+STRINGS_REBOOT =			"\n\nDie PS Vita wird jetzt neugestartet, damit die Datenbank aktualisiert werden kann"
+STRINGS_ERROR =	        	"Installation fehlgeschlagen"
+STRINGS_WAIT =				"Bitte warten..."
+STRINGS_BUB_SHRINK =        "h-encore-Bubble wird verkleinert"
+STRINGS_S_DONE =            "Erfolg!"
+STRINGS_SHRINK =            "\n\nh-encore ist bereits installiert \n\nSoll es erneut installiert werden? \n\n(Version kleiner als 10 MB)"
+STRINGS_CUSTOM_SAVEDATA =	"h-encore anpassen"
+STRINGS_MEHE_FOUND =        "\n\nh-encore ist bereits installiert"
+STRINGS_MODORU =            "Modoru ist korrekt installiert"
+STRINGS_ENSO_SEL =			"Wähle die zu installierende Enso-Version"
+STRINGS_ENSO_DETECT =       "Enso gefunden, prüfe Version"
+STRINGS_ENSO =              "Korrekt installiert!"
+STRINGS_PUPS_SEL =			"Wähle die Firmware aus, die Modoru verwenden soll"
+STRINGS_WAIT_DL =	    	"Herunterladen wird gestartet\n\nBitte warten..."
+STRINGS_PUP_MOVED =         "Zu Modoru verschoben"
+STRINGS_DL_CANCLD =         "Fehler oder Herunterladen abgebrochen"
+STRINGS_DL_ERROR =          "Die Datei kann nicht heruntergeladen werden"
+STRINGS_PUP_DETECT =        "PSP2UPDAT.PUP gefunden\n\nPUP-Version wird überprüft"
+STRINGS_PUP_FOUND =         "PUP gefunden: "
+STRINGS_PUP_FOUND_DATA =    "PUP gefunden in data/PUPS/ \n\nVerschieben nach MODORU"
+STRINGS_PUP_TO_DATA =    	"PUP nach ux0:data/PUPS/ herunterladen?\n\nBei Nein wird die Datei zu Modoru heruntergeladen"
+STRINGS_PUP_RIGHT =         " korrekt in Modoru"
+STRINGS_PUP_CRC =           "heruntergeladen,\n\nCRC wird geprüft"
+STRINGS_PUP_CORPTD =        "PUP fehlerhaft"
+STRINGS_PARSE_ERR =         "Link kann nicht geparst werden"
+STRINGS_DL_HTML =           "Konnte HTML nicht herunterladen"
+
+--Callbacks.lua
+STRINGS_INSTALL =           "Wird installiert..."
+STRINGS_FILE =              "Datei: "
+STRINGS_DLOAD =             "PUP-Update wird heruntergeladen..."
+STRINGS_CANCEL =            "Zum Abbrechen drücke "
+
+--Extra options
+STRINGS_EXTRA_T =		    "Zusatzoptionen"
+STRINGS_EXTRA_C =           "SELECT : Schließen"
+STRINGS_EXTRA_MEME =	    "X                           Memecore installieren"
+STRINGS_EXTRA_HERE =		"R + ↑                      Speicherdaten für h-encore erneut installieren"
+STRINGS_EXTRA_MERE =		"L + ↑                      Speicherdaten für Memecore erneut installieren"
