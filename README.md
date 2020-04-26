@@ -1,5 +1,8 @@
 # Easy Downgrader/Updater for PS Vita (Formerly 365 U/D H)
-**Downgrade/Update your PS Vita the easy way without a PC.**
+**Downgrade/Update your PS Vita the easy way without a PiC.
+
+Modoru installed with this version is only for 3.70 and below, do not try to use it on 3.73
+**
 
 ![header](Preview.png)
 
